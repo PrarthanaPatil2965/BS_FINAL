@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "BlindSpot",
+    "slug": "blindspot",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0A1117",
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.meridian.blindspot",
+      "adaptiveIcon": { "backgroundColor": "#0A1117" },
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "SEND_SMS",
+        "VIBRATE",
+        "INTERNET"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.meridian.blindspot",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "BlindSpot uses the camera to watch the path ahead and warn you about hazards.",
+        "NSMicrophoneUsageDescription": "BlindSpot uses the microphone so you can ask questions by voice.",
+        "NSLocationWhenInUseUsageDescription": "BlindSpot uses your location for the map and to share where you are during an emergency.",
+        "NSSpeechRecognitionUsageDescription": "BlindSpot turns your spoken questions into text.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      ["expo-camera", { "cameraPermission": "BlindSpot uses the camera to watch the path ahead." }],
+      ["expo-location", { "locationAlwaysAndWhenInUsePermission": "BlindSpot uses your location for navigation and emergency help." }],
+      "expo-audio"
+    ],
+    "extra": {
+      "eas": { "projectId": "" }
+    }
+  }
+}
